@@ -24,7 +24,7 @@ W tym pakiecie mo¿na znale¼æ ró¿ne edytory tekstu dzia³aj±ce pod
 DOS-em.
 
 %prep
-%setup -c %{name} -q
+%setup -q -c
 
 rm -rf freedos
 mkdir freedos

@@ -7,6 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		Applications/Emulators
 Source0:	ftp://ftp.task.gda.pl/pub/dos/freedos/files/distributions/ripcord/beta7h01/EN/full/disksets/edit1.zip
+# Source0-md5:	1875376b1734e5fdb1429c14034894cd
 URL:		http://www.freedos.org/
 BuildRequires:	unzip
 Obsoletes:	dosemu-freedos

@@ -1,5 +1,5 @@
 Summary:	FreeDOS Ripcord edit part
-Summary(pl):	Czê¶æ 'edit' FreeDosa
+Summary(pl):	Czê¶æ 'edit' FreeDOSa
 Name:		dosemu-freedos-edit
 Version:	beta7h01
 Release:	3
@@ -21,7 +21,7 @@ This package contains various text editors for FreeDOS.
 
 %description -l pl
 W tym pakiecie mo¿na znale¼æ ró¿ne edytory tekstu dzia³aj±ce pod
-DOSem.
+DOS-em.
 
 %prep
 %setup -c %{name} -q

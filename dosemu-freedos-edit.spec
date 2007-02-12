@@ -1,5 +1,5 @@
 Summary:	FreeDOS Ripcord edit part
-Summary(pl.UTF-8):   Część 'edit' FreeDOSa
+Summary(pl.UTF-8):	Część 'edit' FreeDOSa
 Name:		dosemu-freedos-edit
 Version:	beta7h01
 Release:	4

@@ -1,13 +1,13 @@
 Summary:	FreeDOS Ripcord edit part
 Summary(pl.UTF-8):	Część 'edit' FreeDOSa
 Name:		dosemu-freedos-edit
-Version:	beta7h01
-Release:	4
+Version:	beta7h03
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Applications/Emulators
-Source0:	ftp://ftp.task.gda.pl/pub/dos/freedos/files/distributions/ripcord/beta7h01/EN/full/disksets/edit1.zip
-# Source0-md5:	1875376b1734e5fdb1429c14034894cd
+Source0:	ftp://ftp.task.gda.pl/pub/dos/freedos/files/distributions/ripcord/%{version}/EN/disksets/edit1.zip
+# Source0-md5:	263b4cfa9dadf5b63cdfde06b81f0083
 URL:		http://www.freedos.org/
 BuildRequires:	unzip
 Obsoletes:	dosemu-freedos
@@ -46,5 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 /var/lib/dosemu/bootdir/freedos/bin/*
 /var/lib/dosemu/bootdir/freedos/doc/*
+/var/lib/dosemu/bootdir/freedos/help/*
 /var/lib/dosemu/bootdir/freedos/emacs
-/var/lib/dosemu/bootdir/freedos/vim
+/var/lib/dosemu/bootdir/freedos/vim60

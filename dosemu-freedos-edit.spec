@@ -2,7 +2,7 @@ Summary:	FreeDOS Ripcord edit part
 Summary(pl.UTF-8):	Część 'edit' FreeDOSa
 Name:		dosemu-freedos-edit
 Version:	beta7h03
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		Applications/Emulators
@@ -41,6 +41,9 @@ install -d $RPM_BUILD_ROOT/var/lib/dosemu/bootdir
 
 cp -Rf freedos $RPM_BUILD_ROOT/var/lib/dosemu/bootdir
 cp -Rf vim/vim60 $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos
+
+echo "#!/bin/awk -f" > $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/tools/mve.awk
+tail -n +2 vim/vim60/tools/mve.awk >> $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/tools/mve.awk
 
 %clean
 rm -rf $RPM_BUILD_ROOT

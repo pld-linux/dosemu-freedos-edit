@@ -2,7 +2,7 @@ Summary:	FreeDOS Ripcord edit part
 Summary(pl.UTF-8):	Część 'edit' FreeDOSa
 Name:		dosemu-freedos-edit
 Version:	beta7h03
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Applications/Emulators

@@ -2,7 +2,7 @@ Summary:	FreeDOS Ripcord edit part
 Summary(pl.UTF-8):	Część 'edit' FreeDOSa
 Name:		dosemu-freedos-edit
 Version:	beta7h03
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		Applications/Emulators
@@ -16,6 +16,8 @@ Obsoletes:	dosemu-freedos
 Requires:	dosemu
 Requires:	dosemu-freedos-minimal
 ExclusiveArch:	%{ix86} %{x8664}
+# no compilable source content (only prebuilt DOS binaries)
+%undefine	_debugsource_packages
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,11 +47,17 @@ cp -Rf vim/vim60 $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos
 echo "#!/bin/awk -f" > $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/tools/mve.awk
 tail -n +2 vim/vim60/tools/mve.awk >> $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/tools/mve.awk
 
+# DOS-side data files, not host-executable scripts
+chmod a-x $RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/doc/vim2html.pl \
+	$RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/tools/efm_filter.pl \
+	$RPM_BUILD_ROOT/var/lib/dosemu/bootdir/freedos/vim60/tools/shtags.pl
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+/var/lib/dosemu/bootdir/freedos/appinfo/*
 /var/lib/dosemu/bootdir/freedos/bin/*
 /var/lib/dosemu/bootdir/freedos/doc/*
 /var/lib/dosemu/bootdir/freedos/help/*
